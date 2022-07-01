@@ -9,5 +9,5 @@ import (
 func TestClient_NewDatabase(t *testing.T) {
 	client := NewClient()
 	database, _ := client.NewDatabase("", "", SetMaxPoolSize(10), SetMaxConnIdleTime(5*time.Second), SetMinPoolSize(1))
-	assert.NotEqual(t, nil, database)
+	assert.NotNil(t, database)
 }
